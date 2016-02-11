@@ -1,0 +1,62 @@
+<section class="wrapper">
+  <h3>
+    <%= link_to admin_users_path do %>
+      <i class="fa fa-angle-right">
+        <%= t ".title" %>
+      </i>
+    <% end %>
+  </h3>
+  <div class="row mt">
+    <div class="col-md-9">
+      <section>
+        <div class="panel-heading">
+          <div class="pull-left">
+            <h5>
+              <i class="fa fa-tasks">
+              </i>
+            </h5>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div>
+            <ul>
+              <li>
+                <%= image_tag @user.avatar, size: "150x150" %>
+              </li>
+              <li>
+                <label class="bold">
+                  <%= t ".name" %>
+                </label>
+                <span>
+                  <%= @user.full_name %>
+                </span>
+              </li>
+              <li>
+                <label class="bold">
+                  <%= t ".email" %>
+                </label>
+                <span>
+                  <%= @user.email %>
+                </span>
+              </li>
+              <li>
+                <label class="bold">
+                  <%= t ".admin" %>
+                </label>
+                <span>
+                  <%= @user.admin? %>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="add-task-row">
+            <%= link_to t(".edit"), edit_admin_user_path(@user),
+              class: "btn btn-success btn-sm pull-left" %>
+            <%= link_to t(".add"), new_admin_user_path(@user),
+              class: "btn btn-default btn-sm pull-right" %>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,77 @@
+ <div id="page-wrapper" >
+  <div id="page-inner">
+     <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2 class="page-header"><i class="fa fa-globe"></i> <%= t ".title" %></h2>
+              
+              <%#= render "shared/statusword" %>
+            </div>
+            <div class="panel-body">
+             <div class="panel-heading">
+              <h2 class="page-header">
+              <%= t ".category" %></h2>
+              <%= t ".category_text" %></h2>
+              </div>
+    
+       <!--Dropdown list. Show Category ID -->
+      <div class="col-md-5">
+
+        <%= select_tag :category_id,
+          options_from_collection_for_select(@categories, :id, :name,
+            params[:category_id]), include_blank: t("word.all"),
+              class: "form-control" %>
+
+
+    <%#= f.label :category_id, "Category", class: "col-sm-2 control-label" %>
+    <!--div class="col-sm-10">
+      <%#= f.collection_select :category_id, @categories, :id, :name,
+        {prompt: "Select a category"}, {class: "form-control"} %>
+    </div>    
+    -->
+
+      </div>
+
+
+        <%= radio_button_tag "filter", "learned" %> <%= t ".learned" %>
+        <%= radio_button_tag "filter", "not_learned" %> <%= t ".not_learned" %>
+        <%= radio_button_tag "filter", "all" %> <%= t ".all" %>
+        <%= link_to "#{t '.filter'}", "#", class: "btn btn-default" %>
+        <%= link_to "#{t '.pdf'}", "#", class: "btn btn-default" %>       
+       </div>
+    <hr>
+    <div class="row">
+        <br>
+        <br>
+      <div class="col-md-6">
+      
+      <!--WORD LIST -->
+      <div id="words">
+        <%#= render "words", words: @words %>
+      </div>
+
+      </div>
+      <!--WORD LIST -->
+
+      <div class="col-md-6">
+        
+
+      </div>
+    </div>
+    
+    <br>
+    <br>
+
+    <div class="callout callout-info">
+      <h4>Tip!</h4>
+      <p>Above shows the list of words you have learned and about to learn. Get back when you are free. You can always start again at your own pace.</p>
+    </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

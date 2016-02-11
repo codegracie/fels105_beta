@@ -1,0 +1,38 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <%= t ".panel_title" %>
+  </div>
+  <div class="row">
+    <div class="col-md-6 results">
+      <h3><b><%= t ".lesson_by" %></b></h3>
+      &nbsp;&nbsp;
+      <span><%= link_to current_user.full_name, current_user %></span>
+      <h3><b><%= t ".lesson_category" %></b></h3>
+      &nbsp;&nbsp;
+      <span><%= @lesson.category.name %></span>
+      <h3><b><%= t ".result" %></b></h3>
+      &nbsp;&nbsp;
+      <span><%= "#{@lesson.list_of_correct_answer.count}/20" %></span>
+    </div>
+    <div>
+      <%= image_tag current_user.avatar, size: "150x150", class: "result-avatar" %>
+    </div>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped table-advance table-hover table-alignment">
+      <tbody>
+        <% @lesson_words.each do |lesson_word| %>
+          <tr>
+            <% if lesson_word.answer&.correct %>
+              <td><div class="glyphicon glyphicon-ok"></div></td>
+            <% else %>
+              <td><div class="glyphicon glyphicon-remove"></div></td>
+            <% end %>
+            <td><%= lesson_word.word.content %></td>
+            <td><%= lesson_word.answer&.content %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <%= t ".panel_title" %>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <%= form_for @lesson do |f| %>
+        <%= f.hidden_field :id %>
+        <%= f.hidden_field :user_id %>
+        <%= f.hidden_field :category_id %>
+        <%= f.fields_for :lesson_words do |lesson_word_builder| %>
+          <%= render "answers", f: lesson_word_builder %>
+        <% end %>
+        <%= f.submit t(".submit"), class: "btn btn-lg btn-primary pull-right lesson-submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>

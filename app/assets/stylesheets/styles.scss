@@ -1,0 +1,230 @@
+ul {
+  list-style-type: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.upper-margin {
+  margin-top: 75px;
+}
+
+.user-profile {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.wordlist-menu {
+  text-align: center;
+}
+
+.wordlist-menu-row {
+  margin-bottom: 10px;
+}
+
+.category-word-entries {
+  margin-bottom: 5px;
+}
+
+.category-list {
+  margin-bottom: 25px;
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+.category {
+  margin-bottom: 15px;
+}
+
+.category-picture {
+  margin-top: 40px;
+}
+
+.answers {
+  margin-top: 10px;
+  margin-bottom: 10px !important;
+}
+
+.word {
+  margin-left: 160px;
+  margin-top: 40px;
+}
+
+.word-answers {
+  border: solid;
+  height: 130px;
+}
+
+.table-alignment {
+  text-align: center;
+}
+
+.results {
+  margin-left: 25px;
+}
+
+.result-avatar {
+  margin-top: 35px;
+  margin-left: 220px;
+  border: solid;
+}
+
+.lesson-submit {
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.user-index {
+  margin-left: 80px !important;
+}
+
+.total-learned {
+  margin-bottom: 25px;
+  margin-top: 10px;
+  border: solid;
+  width: 180px;
+  margin-left: 100px;
+}
+.activity-content {
+  margin-left: 55px;
+  margin-bottom: 15px;
+}
+
+.site-footer {
+    position: relative;
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 12px;
+    line-height: 1;
+    color: #767676;
+    border-top: 1px solid #eee;
+}
+
+.right {
+    float: right;
+    padding-right: 70px;
+}
+
+.site-footer-links li {
+    display: inline-block;
+    line-height: 20px;
+}
+
+.site-footer-links {
+    margin: 0;
+    list-style: none;
+}
+
+.front-signup {
+    border: 1px solid #e1e8ed;
+}
+.front-signup {
+    background: #fff;
+    box-shadow: none;
+}
+.front-signup {
+    background: #fff;
+    background: linear-gradient(#fff,#ddd);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#dddddd, GradientType=0)";
+    border-bottom: 1px solid #ccd6dd;
+    border-left: 1px solid #e1e8ed;
+    border-right: 1px solid #e1e8ed;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+}
+.front-signup {
+    border-radius: 4px;
+    height: 550px;
+    float: right;
+    width: 1200px;
+}
+.front-signup .text-input {
+    width: 266px;
+}
+.front-signup .field {
+    display: block;
+    margin: 6px auto;
+    width: 276px;
+}
+
+
+.front-signin {
+    border: 1px solid #e1e8ed;
+}
+.front-signin {
+    background: #fff;
+    background: linear-gradient(#fff,#ddd);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#dddddd, GradientType=0)";
+    border-bottom: 1px solid #ccd6dd;
+    border-left: 1px solid #e1e8ed;
+    border-right: 1px solid #e1e8ed;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+}
+.front-signin {
+    border-radius: 4px;
+    height: 300px;
+    float: right;
+    width: 410px;
+}
+.front-signin .text-input {
+    width: 366px;
+}
+.front-signin .field {
+    display: block;
+    margin: 10px 10px;
+    width: 376px;
+}
+.front-welcome-text h1 {
+    color: #DDDDD;
+    font-size: 38px;
+    line-height: 44px;
+    margin-bottom: 30px;
+    text-shadow: none;
+}
+.front-welcome-text p {
+    color: #DDDDD;
+    font-size: 21px;
+    line-height: 31px;
+    text-shadow: none;
+}
+
+

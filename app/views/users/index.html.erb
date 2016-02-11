@@ -1,0 +1,48 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <%= t ".panel_title" %>
+  </div>
+  <div class="panel-body">
+    <div class="row user-index">
+      <h1><%= t ".title" %></h1>
+   <section class="content-header">
+          </h1>
+            <ol class="breadcrumb">
+              <li><i class="fa fa-dashboard"></i><%= t ".link_home" %></li>
+              <li class="active"><%= t ".link_categories" %></li>
+            </ol>
+        </section>
+
+      
+      <div class="box-tools">
+              <div class="input-group" style="width: 300px;">
+                <!--input type="text" name="table_search" 
+                class="form-control input-sm pull-right" placeholder="Search">
+                <div class="input-group-btn">
+                  <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+            </div>
+        <hr>
+
+<!---Search User-->
+<%= form_tag(users_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search User" %>
+<%= submit_tag "Search" %>
+<% end %>
+  <% if @users.present? %>
+    <ul class="users">
+    <hr>
+    <%#= will_paginate %>
+      <%= render @users %>
+      <%#= will_paginate %>
+    </ul>
+    <% else %>
+    <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+  <% end %>
+<!---Search User-->
+    </div>
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div id="page-wrapper" >
+  <div id="page-inner">
+    <hr/>  
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2><%= t ".title" %></h2> 
+            </div>
+            <div class="panel-body">
+              <div>
+              <ul>
+                <li>
+                  <%= image_tag @category.picture, size: "150x150" %>
+                </li>
+                <li>
+                  <label class="bold">
+                    <%= t ".name" %>
+                  </label>
+                  <span>
+                    <%= @category.name %>
+                  </span>
+                </li>
+                <li>
+                  <label class="bold">
+                    <%= t ".desc" %>
+                  </label>
+                  <span>
+                    <%= @category.description %>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="add-task-row">
+              <%= link_to t(".edit"), edit_admin_category_path(@category),
+                class: "btn btn-success btn-sm pull-left" %>
+              <%= link_to t(".add"), new_admin_category_path(@category),
+                class: "btn btn-default btn-sm pull-right" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
