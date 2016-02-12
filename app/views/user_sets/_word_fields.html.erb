@@ -3,7 +3,7 @@
   <div class="col-md-3">
     <%= f.text_field :content, class: "form-control" %>
   </div>
-  <%= f.fields_for :answers do |ans| %>
+  <%= f.fields_for :answers, f.object.answers.build do |ans| %>
     <%= ans.label :content, "Answer", class: "control-label col-md-2" %>
     <div class="col-md-3">
       <%= ans.text_field :content, class: "form-control" %>
