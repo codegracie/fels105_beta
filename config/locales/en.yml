@@ -37,14 +37,15 @@ en:
       title: Admin Page
       logout: Log out
       tablink_home: Home
-      tablink_profile: Profile
+      tablink_profile: My Profile
       tablink_account: My Account
       tablink_setting: Settings
-      tablink_users: Users
+      tablink_users: Users List
       tablink_login: Login
       tablink_logout: Logout
       tablink_words: Words List
       tablink_lessons: Lessons
+      tablink_sets: My Sets
       tablink_website: http://www.framgia.com
     footer:
       footer_title: Training Project by Grace Sojor and Christian Angel Galamay from Framgia Philippines
@@ -222,6 +223,8 @@ en:
         title: List of Users
         name: Full name
         email: Email Address
+        following: Following
+        followers: Followers
         admin: Admin?
         total_users: Total Users
       show:

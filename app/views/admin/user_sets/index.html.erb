@@ -27,6 +27,11 @@
             </th>
             <th>
               <i class="fa fa-text-height">
+                Created By
+              </i>
+            </th>
+            <th>
+              <i class="fa fa-text-height">
                 Recommended
               </i>
             </th>
@@ -40,6 +45,9 @@
               </td>
               <td>
                 <%= set.description %>
+              </td>
+              <td>
+                <%= set.user.full_name %>
               </td>
               <td>
                 <%= set.recommended %>

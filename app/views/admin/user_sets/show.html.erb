@@ -29,6 +29,22 @@
                   <%= @user_set.description %>
                 </span>
               </li>
+              <li>
+                <label class="bold">
+                  Created By
+                </label>
+                <span>
+                  <%= @user_set.user.full_name %>
+                </span>
+              </li>
+              <li>
+                <label class="bold">
+                  Recommended
+                </label>
+                <span>
+                  <%= @user_set.recommended %>
+                </span>
+              </li>
             </ul>
             <%= render "show_words" %>
           </div>
