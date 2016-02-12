@@ -38,15 +38,17 @@ en:
       logout: Log out
       tablink_home: Home
       tablink_profile: Profile
-      tablink_account: Account
+      tablink_account: My Account
       tablink_setting: Settings
       tablink_users: Users
       tablink_login: Login
       tablink_logout: Logout
+      tablink_words: Words List
+      tablink_lessons: Lessons
       tablink_website: http://www.framgia.com
     footer:
       footer_title: Training Project by Grace Sojor and Christian Angel Galamay from Framgia Philippines
-      button_about: About this Project | 
+      button_about: About this Project |
       button_contact: Contact |
       button_faq: Frequently Asked Questions
   home:
@@ -104,6 +106,7 @@ en:
       words: List of words
       answers: List of answers
       users: List of users
+      sets: List of user sets
   users:
     index:
       panel_title: User Index
@@ -228,6 +231,10 @@ en:
         admin: Admin
       new:
         title: Create User
+    user_sets:
+      edit:
+        add_answer: Add Answer
+        add_new_answer: Add a new Answer
     categories:
       index:
         link_home: Admin

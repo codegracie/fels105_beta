@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships
   has_many :user_sets, dependent: :destroy
+  has_many :set_lessons, dependent: :destroy
 
   mount_uploader :avatar, AvatarUploader
   validates :first_name, presence: true, length: {maximum: 50}

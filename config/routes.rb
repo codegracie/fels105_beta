@@ -35,6 +35,7 @@ Rails.application.routes.draw do
     resources :words
     resources :answers
     resources :users
+    resources :user_sets
   end
 
   # Example of regular route:
