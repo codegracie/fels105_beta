@@ -5,6 +5,7 @@ class Admin::UsersController < AdminController
 
   def show
     @user = User.find params[:id]
+    @user_sets = @user.user_sets
   end
 
   def new

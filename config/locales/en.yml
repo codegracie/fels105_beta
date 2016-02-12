@@ -62,7 +62,7 @@ en:
       activities_text: Your network feeds are shown below.
     signup:
       signup_welcome: Welcome to Framgia eLearning System
-      signup_description: Free online learning, and a worldwide community of native-speaking language learners just like you. 
+      signup_description: Free online learning, and a worldwide community of native-speaking language learners just like you.
       signup_button: Free Language Learning - Sign up now!
     about:
       about_desc: This is a training project by Grace Sojor and Christian Angel Galamay from Framgia Philippines.
@@ -231,6 +231,8 @@ en:
         title: Users
         name: Full Name
         email: Email Address
+        following: Following
+        followers: Followers
         admin: Admin
       new:
         title: Create User
