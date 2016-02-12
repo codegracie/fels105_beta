@@ -5,8 +5,16 @@
   <div class="panel-body">
     <ul>
       <% @set_lessons.each do |set| %>
-        <li><%= link_to set.user_set.title, set_lessons_path(user_set_id: set.id),
-          method: :post %> by <%= set.user_set.user.full_name %><li>
+        <li>
+          <div class="col-md-6">
+            <%= link_to set.user_set.title, set_lessons_path(user_set_id: set.id),
+              method: :post %>
+          </div>
+          <div class="col-md-6">
+            <%= link_to "Unstudy", set_lesson_path(set), method: :delete,
+              data: {confirm: "You want to unstudy this Set?"}, class: "button btn btn-danger btn-xs"%>
+          </div>
+        <li>
       <% end %>
     </ul>
   </div>

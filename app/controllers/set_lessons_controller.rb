@@ -25,6 +25,13 @@ class SetLessonsController < ApplicationController
     redirect_to edit_set_lesson_path @set_lesson
   end
 
+  def destroy
+    @lesson = SetLesson.find params[:id]
+    @lesson.destroy
+
+    redirect_to root_path
+  end
+
   private
   def lesson_params
     params.require(:set_lesson).permit :user_id, :user_set_id,
