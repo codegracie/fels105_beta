@@ -1,109 +1,97 @@
-
-
 <div class="wrapper">
  <div class="content-wrapper" style="min-height: 906px;">
 <br>
-    <section class="content-header">
-      <h1><%= t ".text_dashboard" %><small><%= t ".text_controlpanel" %></small>
-      </h1>
-        <ol class="breadcrumb">
-          <li><i class="fa fa-dashboard"></i><%= t ".link_home" %></li>
-          <li class="active"><%= t ".link_dashboard" %></li>
-        </ol>
-    </section>
-
+<section class="content-header">
+  <h1><%= t ".text_dashboard" %><small><%= t ".text_controlpanel" %></small>
+  </h1>
+    <ol class="breadcrumb">
+      <li><i class="fa fa-dashboard"></i><%= t ".link_home" %></li>
+      <li class="active"><%= t ".link_dashboard" %></li>
+    </ol>
+</section>
 <nav class="navbar navbar-static-top" role="navigation">
-          <!-- Sidebar toggle button-->
-          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Toggle navigation</span>
-          </a>
-          <!-- Navbar Right Menu -->
-          <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-              <!-- User Account-->
-              <li class="dropdown user user-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <%= link_to image_tag(current_user.avatar, size: "100x100"), current_user %>
-                  <span class="hidden-xs"><%= t ".logged_user" %><%= current_user.full_name %></span>
-               </a> 
-               </li>               
-          </div>
+  <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+    <span class="sr-only">Toggle navigation</span>
+  </a>
+  <div class="navbar-custom-menu">
+    <ul class="nav navbar-nav">
+      <li class="dropdown user user-menu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <%= link_to image_tag(current_user.avatar, size: "100x100"), current_user %>
+          <span class="hidden-xs"><%= t ".logged_user" %><%= current_user.full_name %></span>
+       </a> 
+       </li>               
+  </div>
 </nav>
-
-    <section class="content-header">
-        <ol class="breadcrumb">
-          <li><i class="fa fa-globe"></i><%= t ".link_demographics" %></li>
-        </ol>
-    </section>
+<section class="content-header">
+  <ol class="breadcrumb">
+    <li><i class="fa fa-globe"></i><%= t ".link_demographics" %></li>
+  </ol>
+</section>
 <div class="row">
-
-
-    <!--@users = User.joined_within_five_days -->
-
-
-     <div class="col-lg-3 col-xs-6">
-              <!-- small box -->
-              <div class="small-box bg-yellow2">
-                <div class="inner">
-                  <h3><%= User.count %></h3>
-                  <p>User Registrations</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-person-add"></i>
-                </div>
-                  <a href="#" class="small-box-footer"><%= link_to t(".userlist"), admin_users_path %><i class="fa fa-arrow-circle-right"></i></a>
-              </div>
-            </div><!-- ./col -->
-
-
-            <div class="col-lg-3 col-xs-6">
-              <!-- small box -->
-              <div class="small-box bg-yellow2">
-                <div class="inner">
-                  <h3><%= Category.count %></h3>
-                  <p>Categories</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-bag"></i>
-                </div>
-                <a href="#" class="small-box-footer"><%= link_to t(".userlist"), admin_categories_path %><i class="fa fa-arrow-circle-right"></i></a>
-              </div>
-            </div><!-- ./col -->
-
-
-          <div class="col-lg-3 col-xs-6">
-              <!-- small box -->
-              <div class="small-box bg-yellow2">
-                <div class="inner">
-                  <h3><%= Category.count %></h3>
-                  <p>Categories</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-bag"></i>
-                </div>
-                <a href="#" class="small-box-footer"><%= link_to t(".userlist"), admin_categories_path %><i class="fa fa-arrow-circle-right"></i></a>
-              </div>
-            </div><!-- ./col -->
-
-            <div class="col-lg-3 col-xs-6">
-              <!-- small box -->
-              <div class="small-box bg-yellow2">
-                <div class="inner">
-                  <h3><%= Category.count %></h3>
-                  <p>Categories</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-bag"></i>
-                </div>
-                <a href="#" class="small-box-footer"><%= link_to t(".userlist"), admin_categories_path %><i class="fa fa-arrow-circle-right"></i></a>
-              </div>
-            </div><!-- ./col -->
+  <div class="col-lg-3 col-xs-6">
+    <div class="small-box bg-yellow2">
+      <div class="inner">
+        <h3><%= User.count %></h3>
+        <p>User Registrations</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-person-add"></i>
+      </div>
+        <a href="#" class="small-box-footer"><%= link_to t(".userlist"), 
+          admin_users_path %><i class="fa fa-arrow-circle-right"></i>
+        </a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-xs-6">
+    <div class="small-box bg-yellow2">
+      <div class="inner">
+        <h3><%= Category.count %></h3>
+        <p>Categories</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-bag"></i>
+      </div>
+      <a href="#" class="small-box-footer"><%= link_to t(".userlist"), admin_categories_path %>
+        <i class="fa fa-arrow-circle-right"></i>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-xs-6">
+    <div class="small-box bg-yellow2">
+      <div class="inner">
+        <h3><%= Category.count %></h3>
+        <p>Categories</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-bag"></i>
+      </div>
+      <a href="#" class="small-box-footer"><%= link_to t(".userlist"), admin_categories_path %>
+        <i class="fa fa-arrow-circle-right"></i>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-xs-6">
+    <div class="small-box bg-yellow2">
+      <div class="inner">
+        <h3><%= Category.count %></h3>
+        <p>Categories</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-bag"></i>
+      </div>
+      <a href="#" class="small-box-footer"><%= link_to t(".userlist"), admin_categories_path %>
+        <i class="fa fa-arrow-circle-right"></i>
+      </a>
+    </div>
+  </div>
 </div>
-
 <br>
 <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Version</b> 1.0.0
-        </div>
-        <strong>Copyright © 2016 <a href="http://www.framgia.com">Grace Sojor and Christian Angel Galamay from Framgia Philippines</a>.</strong> All rights reserved.
-      </footer>
+  <div class="pull-right hidden-xs">
+    <b>Version</b> 1.0.0
+  </div>
+  <strong>
+    Copyright © 2016 <a href="http://www.framgia.com">Grace Sojor and Christian Angel Galamay from Framgia Philippines</a>
+  </strong> All rights reserved.
+</footer>

@@ -5,73 +5,71 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-4">
-
-    <section class="content-header">
-        <ol class="breadcrumb">
-          <li><i class="fa fa-globe"></i><%= t ".link_profile" %></li>
-        </ol>
-    </section>
-
-<!-- /.Profile Sidebar -->
+        <section class="content-header">
+          <ol class="breadcrumb">
+            <li><i class="fa fa-globe"></i><%= t ".link_profile" %></li>
+          </ol>
+        </section>
         <div class="box box-solid">
-                <div class="box-header with-border">
-                  <h3 class="box-title"><%= @user.full_name %></h3>
-                    <div class="box-tools">
-                      <%= link_to image_tag(@user.avatar, size: "150x150"), @user %>
-                    </div>
-                    <br>
-                </div>
-                <div class="box-body no-padding" style="display: block;">
-                  <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="#"><i class="fa fa-genderless"></i><br><%= @user.full_name %><span class="label label-primary pull-right"></span></a></li>
-                       <br>
-                      <%= render "shared/status" %>  
-                      <%= render "shared/follow_form" %>
-                  </ul>
-                </div><!-- /.box-body -->
+          <div class="box-header with-border">
+            <h3 class="box-title"><%= @user.full_name %></h3>
+              <div class="box-tools">
+                <%= link_to image_tag(@user.avatar, size: "150x150"), @user %>
               </div>
-
-<!-- /.Profile Sidebar -->
-      </div>
-
-
-      <div class="col-md-6">
-
-              <div class="box box-solid">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Create and Learn the Easy Way!</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body clearfix">
-                  <blockquote class="pull-right">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                    <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                  </blockquote>
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div>
-     
-
-      <div class="col-md-8">
-        <div class="row">
-          <%= link_to t(".button_words"), words_path, class: "btn btn-primary btn-lg" %>
-          <%= link_to t(".button_lessons"), categories_path, class: "btn btn-primary btn-lg" %>
-        </div>
-        <div class="row">
-          <h3><%= t ".activities" %></h3>
-          <ul>
-            <% @activities.each do |activity| %>
-              <li>
-                <%= link_to image_tag(activity.log.avatar, size: "50x50"), activity.log %>
-                <%= link_to activity.log.full_name, activity.log %>
-                <div class="activity-content">
-                  <%= activity.content %>
-                </div>
+              <br>
+          </div>
+          <div class="box-body no-padding" style="display: block;">
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active">
+                <a href="#">
+                  <i class="fa fa-genderless"></i>
+                  <br><%= @user.full_name %>
+                  <span class="label label-primary pull-right"></span>
+                </a>
               </li>
-              <hr>
-              <%= will_paginate @activities %>
-            <% end %>
-          </ul>
+              <br>
+              <%= render "shared/status" %>  
+              <%= render "shared/follow_form" %>
+            </ul>
+          </div>
         </div>
       </div>
+      <div class="col-md-6">
+        <div class="box box-solid">
+          <div class="box-header with-border">
+            <h3 class="box-title">Create and Learn the Easy Way!</h3>
+          </div>
+          <div class="box-body clearfix">
+            <blockquote class="pull-right">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <small>Someone famous in 
+                <cite title="Source Title">Source Title</cite>
+              </small>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+      <div class="row">
+        <%= link_to t(".button_words"), words_path, class: "btn btn-primary btn-lg" %>
+        <%= link_to t(".button_lessons"), categories_path, class: "btn btn-primary btn-lg" %>
+      </div>
+      <div class="row">
+        <h3><%= t ".activities" %></h3>
+        <ul>
+          <% @activities.each do |activity| %>
+            <li>
+              <%= link_to image_tag(activity.log.avatar, size: "50x50"), activity.log %>
+              <%= link_to activity.log.full_name, activity.log %>
+              <div class="activity-content">
+                <%= activity.content %>
+              </div>
+            </li>
+            <hr>
+          <%= will_paginate @activities %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

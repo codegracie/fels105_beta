@@ -108,6 +108,7 @@ en:
     index:
       panel_title: User Index
       title: All Users
+      number_of_users: user(s) found in database.
     create:
       success: Welcome to Framgia eLearning System!
       info: Please check your email to activate your account.
