@@ -1,0 +1,39 @@
+<section class="wrapper">
+  <div class="row mt">
+    <div class="col-md-9">
+      <section>
+        <div class="panel-heading">
+          <div class="pull-left">
+            <h5>
+              <i class="fa fa-tasks">
+              </i>
+            </h5>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div>
+            <ul>
+              <li>
+                <label class="bold">
+                  User Set
+                </label>
+                <span>
+                  <%= @user_set.title %>
+                </span>
+              </li>
+              <li>
+                <label class="bold">
+                  Description
+                </label>
+                <span>
+                  <%= @user_set.description %>
+                </span>
+              </li>
+            </ul>
+            <%= render "show_words" %>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

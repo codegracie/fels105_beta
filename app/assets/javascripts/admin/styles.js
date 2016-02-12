@@ -13,3 +13,7 @@ function add_fields(link, association, content) {
   var regexp = new RegExp("new_" + association, "g");
   $(".added-answer").append(content.replace(regexp, new_id));
 }
+
+function toggleAnswer(object) {
+  $(object).parent().parent().find(".set-answers").eq(0).toggle();
+}

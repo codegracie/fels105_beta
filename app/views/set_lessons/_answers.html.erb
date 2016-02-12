@@ -1,0 +1,31 @@
+<div class="word-answers">
+  <%= f.hidden_field :id %>
+  <%= f.hidden_field :lesson_id %>
+  <%= f.hidden_field :word_id %>
+  <div class="col-md-4">
+    <div class="word">
+      <h1>
+        <b><%= f.object.word.content %></b>
+      </h1>
+    </div>
+  </div>
+  <% f.object.word.answers.shuffle.each do |answer| %>
+    <div class="col-md-4">
+      <div class="set-answers">
+        <h1>
+          <b><%= f.label :answer_id, answer.content , id: "set-answer-contet" %></b>
+        </h1>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <button id="set-view-trigger<%= answer.id %>" class="btn btn-lg btn-success set-answers"
+        type="button" onclick="toggleAnswer(this);">
+        View
+      </button>
+      <div class="learned">
+        <b>Learned?</b>
+        <%= f.radio_button :answer_id, answer.id %>
+      </div>
+    </div>
+  <% end %>
+</div>

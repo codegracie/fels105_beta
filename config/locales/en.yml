@@ -118,13 +118,23 @@ en:
       title: New to Framgia Elearning System?
     show:
       panel_title: Profile
-      link_profile: Welcome 
+      link_profile: Welcome
       button_words: Words
       button_lessons: Lessons
     form:
       title: New to Framgia Elearning System?
       signupnow:  Sign up now!
       select_photo: Select Photo
+    user_set_form:
+      add_answer: Add Answer
+      add_new_answer: Add a new Answer
+  user_sets:
+    edit:
+      add_answer: Add Answer
+      add_new_answer: Add a new Answer
+  set_lessons:
+    edit:
+      submit: Submit
   relationships:
     index:
       title: Following and Followers
@@ -168,7 +178,7 @@ en:
       index:
         link_home: Admin
         link_dashboard: Dashboard
-        logged_user: Welcome back 
+        logged_user: Welcome back
         link_demographics: Demographics
         text_controlpanel: Control Panel
         text_dashboard: Dashboard
@@ -225,7 +235,7 @@ en:
         title: Listing Categories
         no_items_found: "SEARCH RESULT: THERE ARE NO CATEGORY ITEMS FOUND."
         totalcategories: Total Categories
-      show: 
+      show:
         title: Category
         name: Category Name
         desc: Category Description

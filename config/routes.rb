@@ -19,9 +19,11 @@ Rails.application.routes.draw do
   resources :users do
     member do
       resources :relationships, only: [:index, :create, :destroy]
+      resources :user_sets
     end
   end
   resources :categories
+  resources :set_lessons
   resources :lessons
   resources :lesson_words
   resources :account_activations, only: [:edit]

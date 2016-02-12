@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160202081535) do
+ActiveRecord::Schema.define(version: 20160211054949) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "log_id",        limit: 4
@@ -41,12 +41,13 @@ ActiveRecord::Schema.define(version: 20160202081535) do
   add_index "categories", ["name"], name: "index_categories_on_name", using: :btree
 
   create_table "lesson_words", force: :cascade do |t|
-    t.integer  "lesson_id",  limit: 4
-    t.integer  "word_id",    limit: 4
-    t.integer  "answer_id",  limit: 4
+    t.integer  "lesson_id",     limit: 4
+    t.integer  "word_id",       limit: 4
+    t.integer  "answer_id",     limit: 4
     t.boolean  "correct"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "set_lesson_id", limit: 4
   end
 
   add_index "lesson_words", ["lesson_id"], name: "index_lesson_words_on_lesson_id", using: :btree
@@ -73,6 +74,27 @@ ActiveRecord::Schema.define(version: 20160202081535) do
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true, using: :btree
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id", using: :btree
 
+  create_table "set_lessons", force: :cascade do |t|
+    t.integer  "user_id",     limit: 4
+    t.integer  "user_set_id", limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  add_index "set_lessons", ["user_id"], name: "index_set_lessons_on_user_id", using: :btree
+  add_index "set_lessons", ["user_set_id"], name: "index_set_lessons_on_user_set_id", using: :btree
+
+  create_table "user_sets", force: :cascade do |t|
+    t.integer  "user_id",     limit: 4
+    t.integer  "category_id", limit: 4
+    t.string   "title",       limit: 255
+    t.text     "description", limit: 65535
+    t.string   "set_type",    limit: 255
+    t.boolean  "recommended"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name",        limit: 255
     t.string   "last_name",         limit: 255
@@ -96,6 +118,7 @@ ActiveRecord::Schema.define(version: 20160202081535) do
     t.string   "content",     limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.integer  "user_set_id", limit: 4
   end
 
   add_index "words", ["category_id"], name: "index_words_on_category_id", using: :btree

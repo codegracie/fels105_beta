@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
     dependent: :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships
+  has_many :user_sets, dependent: :destroy
 
   mount_uploader :avatar, AvatarUploader
   validates :first_name, presence: true, length: {maximum: 50}
@@ -26,12 +27,9 @@ class User < ActiveRecord::Base
   before_save   :downcase_email
   before_create :create_activation_digest
 
-
-def self.search(search)
-  where("first_name LIKE ?", "%#{search}%") 
- 
-end
-
+  def self.search(search)
+    where("first_name LIKE ?", "%#{search}%")
+  end
 
   def full_name
     "#{first_name} #{last_name}"
