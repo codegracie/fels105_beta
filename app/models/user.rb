@@ -26,10 +26,18 @@ class User < ActiveRecord::Base
   before_save   :downcase_email
   before_create :create_activation_digest
 
+  #scope :recents, where("created_at > ?", Time.now-7.days)
+
+
+
+#def week
+#    some_attribute_like_date.strftime('%Y-%W')
+#end
+
+
 
 def self.search(search)
   where("first_name LIKE ?", "%#{search}%") 
- 
 end
 
 

@@ -1,8 +1,16 @@
 <div class="wrapper">
  <div class="content-wrapper" style="min-height: 906px;">
 <br>
+
+<!-- <h1>Number of users who registered in last 5 days:  </h1 --> <%#= @lastfivedays %>
+
+
+
 <section class="content-header">
-  <h1><%= t ".text_dashboard" %><small><%= t ".text_controlpanel" %></small>
+  <h1><%= t ".text_dashboard" %>
+  <small>
+    <%= t ".text_controlpanel" %>
+  </small>
   </h1>
     <ol class="breadcrumb">
       <li><i class="fa fa-dashboard"></i><%= t ".link_home" %></li>

@@ -1,15 +1,26 @@
 class UsersController < ApplicationController
 
   def index
+
     @users = User.paginate page: params[:page], per_page: 20
-
-
     @users = User.all
+
+    #####last five days
+    #@lastfivedays = User.where(
+    #'created_at >= :five_days_ago',
+    #:five_days_ago => 5.days.ago,
+    #).count
+
+    ####month
+    #@users = User.all(:conditions => ["created_at >= ?", Date.today.at_beginning_of_month])
+
+
     if params[:search]
       @users = User.search(params[:search]).order("created_at DESC")
     else
       @users = User.all.order('created_at DESC')
     end
+
 
 
   end

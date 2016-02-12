@@ -104,6 +104,7 @@ en:
       words: List of words
       answers: List of answers
       users: List of users
+      gotohome: Switch to User
   users:
     index:
       panel_title: User Index
