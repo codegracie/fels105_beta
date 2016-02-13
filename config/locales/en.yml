@@ -108,6 +108,50 @@ en:
       answers: List of answers
       users: List of users
       sets: List of user sets
+  set_lessons:
+    edit:
+      submit: Submit
+  relationships:
+    index:
+      title: Following and Followers
+  lessons:
+    update:
+      start: Lesson starts! Goodluck!
+      finish: Lesson done! Please check your result.
+    create:
+      start: Lesson starts! Goodluck!
+    edit:
+      panel_title: Lesson
+      submit: Submit
+  set_lessons:
+    answers:
+      view: View
+      learned: Learned?
+  sessions:
+    create:
+      not_activated: Account not activated.
+      check_email: Check your email for the activation link.
+      invalid: Invalid email/password combination
+    new:
+      header: Learn Anytime, Anywhere
+      content: Make your breaks and commutes more productive.<br/> Get to learn new languages at your own pace.<br/>Connect with native-speaking language learners just like you.
+      title: Sign in now
+      remember: Remember me on this computer
+      submit: Sign in
+  shared:
+    status:
+      followers: Followers
+      following: Following
+      total_words: Words Learned
+    follow:
+      follow: Follow
+    unfollow:
+      unfollow: Unfollow
+    sets:
+      studying: Studying Sets
+      unstudy: Unstudy
+      recommended: Recommended Sets
+      new: Newly created Sets
   users:
     index:
       panel_title: User Index
@@ -132,51 +176,41 @@ en:
     user_set_form:
       add_answer: Add Answer
       add_new_answer: Add a new Answer
-  user_sets:
-    edit:
-      add_answer: Add Answer
-      add_new_answer: Add a new Answer
-  set_lessons:
-    edit:
-      submit: Submit
-  relationships:
-    index:
-      title: Following and Followers
-  lessons:
-    update:
-      start: Lesson starts! Goodluck!
-      finish: Lesson done! Please check your result.
-    create:
-      start: Lesson starts! Goodluck!
-    edit:
-      panel_title: Lesson
-      submit: Submit
-  sessions:
-    create:
-      not_activated: Account not activated.
-      check_email: Check your email for the activation link.
-      invalid: Invalid email/password combination
-    new:
-      header: Learn Anytime, Anywhere
-      content: Make your breaks and commutes more productive.<br/> Get to learn new languages at your own pace.<br/>Connect with native-speaking language learners just like you.
-      title: Sign in now
-      remember: Remember me on this computer
-      submit: Sign in
-  shared:
-    status:
-      followers: Followers
-      following: Following
-      total_words: Words Learned
-    follow:
-      follow: Follow
-    unfollow:
-      unfollow: Unfollow
+    add_user_set:
+      lesson_list: My Lesson Set Lists
+      add_new: Add New
+      manage: Manage
+      title: Title
+      description: Description
+      add_lesson: Add new Lesson Set
+    show_user_set:
+      lesson_list: Lesson Set Lists
+      title: Title
+      description: Description
+      view: View
+    word_fields:
+      remove: Remove
   user_mailer:
     account_activation:
       subject: Account activation
       title: Framgia
       message: Welcome to the Framgia eLearning! Click on the link below to activate your account
       activate: Activate
+  user_sets:
+    index:
+      manage: Manage User Sets
+      list: List
+      title: Title
+      description: Description
+    show:
+      title: User Sets
+      description: Description
+    show_words:
+      word: Word
+      answer: Answer
+    edit:
+      add_answer: Add Answer
+      add_new_answer: Add a new Answer
   admin:
     dashboard:
       index:

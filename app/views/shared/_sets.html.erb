@@ -1,6 +1,6 @@
 <div class="panel panel-info set-panel">
   <div class="panel-heading">
-    Studying Sets
+    <%= t ".studying" %>
   </div>
   <div class="panel-body">
     <ul>
@@ -11,7 +11,7 @@
               method: :post %>
           </div>
           <div class="col-md-6">
-            <%= link_to "Unstudy", set_lesson_path(set), method: :delete,
+            <%= link_to t(".unstudy"), set_lesson_path(set), method: :delete,
               data: {confirm: "You want to unstudy this Set?"}, class: "button btn btn-danger btn-xs"%>
           </div>
         <li>
@@ -22,12 +22,15 @@
 
 <div class="panel panel-info set-panel">
   <div class="panel-heading">
-    Recommended Sets
+    <%= t ".recommended" %>
   </div>
   <div class="panel-body">
     <ul>
       <% @sets.each do |set| %>
-        <li><%= link_to set.title, set_lessons_path(user_set_id: set.id), method: :post %> by <%= set.user.full_name %><li>
+        <li>
+          <%= link_to set.title, set_lessons_path(user_set_id: set.id),
+            method: :post %> by <%= set.user.full_name %>
+        <li>
       <% end %>
     </ul>
   </div>
@@ -35,12 +38,15 @@
 
 <div class="panel panel-info set-panel">
   <div class="panel-heading">
-    Newly created Sets
+    <%= t ".new" %>
   </div>
   <div class="panel-body">
     <ul>
       <% @new_sets.each do |set| %>
-        <li><%= link_to set.title, set_lessons_path(user_set_id: set.id), method: :post %> by <%= set.user.full_name %><li>
+        <li>
+          <%= link_to set.title, set_lessons_path(user_set_id: set.id),
+            method: :post %> by <%= set.user.full_name %>
+        <li>
       <% end %>
     </ul>
   </div>

@@ -19,8 +19,8 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           <%= link_to image_tag(current_user.avatar, size: "100x100"), current_user %>
           <span class="hidden-xs"><%= t ".logged_user" %><%= current_user.full_name %></span>
-       </a> 
-       </li>               
+       </a>
+       </li>
   </div>
 </nav>
 <section class="content-header">
@@ -38,7 +38,7 @@
       <div class="icon">
         <i class="ion ion-person-add"></i>
       </div>
-        <a href="#" class="small-box-footer"><%= link_to t(".userlist"), 
+        <a href="#" class="small-box-footer"><%= link_to t(".userlist"),
           admin_users_path %><i class="fa fa-arrow-circle-right"></i>
         </a>
     </div>

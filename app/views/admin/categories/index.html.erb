@@ -8,7 +8,7 @@
             <h2 class="page-header">
              <i class="fa fa-globe"></i> <%= t ".title" %>
               <small class="pull-right"><%= t ".date" %><br><%= datetime Time.now %></small>
-              <small class="pull-right"><%= t ".totalcategories" %><br><%= User.count %></small>
+              <small class="pull-right"><%= t ".totalcategories" %><br><%= @categories.count %></small>
             </h2>
             <div class="box-tools">
               <div class="input-group" style="width: 300px;">
@@ -49,47 +49,50 @@
                 </th>
               </tr>
             </thead>
-              <tbody>
-                <% if @categories.any? %>
-                  <% @categories.each do |category| %>
-                     <tr>
-                      <td>
-                        <%= category.name %>
-                      </td>
-                      <td>
-                        <%= category.description %>
-                      </td>
-                      <td>
-                        <%= image_tag category.picture, size: "80x80" %>
-                      </td>
-                      <td>
-                        <div class="admin-actions">
-                          <%= link_to  admin_category_path(category),
-                            class: "button btn btn-success btn-xs" do %>
-                            <i class="fa fa-file-text"></i>
-                          <% end %>
-                          <%= link_to edit_admin_category_path(category),
-                            class: "button btn btn-primary btn-xs" do %>
-                            <i class="fa fa-pencil"></i>
-                          <% end %>
-                          <%= link_to admin_category_path(category), method: :delete,
-                            data: {confirm: "You want to delete?"},
-                            class: "button btn btn-danger btn-xs" do %>
-                            <i class="fa fa-trash-o"></i>
-                          <% end %>
-                        </div>
-                      </td>
-                    </tr>
-                  <% end %>
-                </tbody>
-            </table>
-            <div class="col-sm-5">
-              <div class="dataTables_info" id="example2_info" role="status" aria-live="polite"><%= t ".totalcategories" %><br>
-              <%= Category.count %></div>
+            <tbody>
+              <% if @categories.any? %>
+                <% @categories.each do |category| %>
+                   <tr>
+                    <td>
+                      <%= category.name %>
+                    </td>
+                    <td>
+                      <%= category.description %>
+                    </td>
+                    <td>
+                      <%= image_tag category.picture, size: "80x80" %>
+                    </td>
+                    <td>
+                      <div class="admin-actions">
+                        <%= link_to  admin_category_path(category),
+                          class: "button btn btn-success btn-xs" do %>
+                          <i class="fa fa-file-text"></i>
+                        <% end %>
+                        <%= link_to edit_admin_category_path(category),
+                          class: "button btn btn-primary btn-xs" do %>
+                          <i class="fa fa-pencil"></i>
+                        <% end %>
+                        <%= link_to admin_category_path(category), method: :delete,
+                          data: {confirm: "You want to delete?"},
+                          class: "button btn btn-danger btn-xs" do %>
+                          <i class="fa fa-trash-o"></i>
+                        <% end %>
+                      </div>
+                    </td>
+                  </tr>
+                <% end %>
+            </tbody>
+          </table>
+          <div class="col-sm-5">
+            <div class="dataTables_info" id="example2_info" role="status"aria-live="polite">
+              <%= t ".totalcategories" %>
+              <br>
+              <%= Category.count %>
             </div>
-            <div class="text-center">
-              <%= will_paginate %>
-            </div>
+          </div>
+          <div class="text-center">
+            <%= will_paginate %>
+          </div>
             <% else %>
               <%= t :no_items_found %>
             <% end %>

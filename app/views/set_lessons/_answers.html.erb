@@ -20,10 +20,10 @@
     <div class="col-md-4">
       <button id="set-view-trigger<%= answer.id %>" class="btn btn-lg btn-success set-answers"
         type="button" onclick="toggleAnswer(this);">
-        View
+        <%= t ".view" %>
       </button>
       <div class="learned">
-        <b>Learned?</b>
+        <b><%= t ".learned" %></b>
         <%= f.radio_button :answer_id, answer.id %>
       </div>
     </div>
