@@ -1,7 +1,12 @@
 class Admin::CategoriesController < AdminController
   def index
-    @categories = Category.order(created_at: :desc)
-      .paginate page: params[:page], per_page: 5
+    if params[:search]
+      @categories = Category.paginate(page: params[:page])
+        .search(params[:search]).order("created_at DESC")
+    else
+      @categories = Category.order(created_at: :desc)
+        .paginate page: params[:page], per_page: 5
+    end
   end
 
   def new

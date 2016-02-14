@@ -1,11 +1,16 @@
 class Admin::UsersController < AdminController
   def index
-    @users = User.paginate page: params[:page], per_page: 10
+    if params[:search]
+      @users = User.paginate(page: params[:page]).search(params[:search]).order("created_at DESC")
+    else
+      @users = User.paginate page: params[:page], per_page: 20
+    end
   end
 
   def show
     @user = User.find params[:id]
     @user_sets = @user.user_sets
+    @set_lessons = @user.set_lessons
   end
 
   def new

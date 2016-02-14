@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
   before_save   :downcase_email
   before_create :create_activation_digest
 
-  def self.search(search)
+  def self.search search
     where("first_name LIKE ?", "%#{search}%")
   end
 

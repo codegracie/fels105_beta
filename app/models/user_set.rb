@@ -10,4 +10,8 @@ class UserSet < ActiveRecord::Base
 
   accepts_nested_attributes_for :words, reject_if:
     lambda {|a| a[:content].blank?}, allow_destroy: true
+
+  def self.search search
+    where("title LIKE ?", "%#{search}%")
+  end
 end

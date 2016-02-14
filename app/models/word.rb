@@ -8,4 +8,8 @@ class Word < ActiveRecord::Base
     lambda {|a| a[:content].blank?}, allow_destroy: true
 
   validates :content, presence: true
+
+  def self.search search
+    where("content LIKE ?", "%#{search}%")
+  end
 end

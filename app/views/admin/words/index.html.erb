@@ -10,12 +10,15 @@
               <small class="pull-right"><%= t ".date" %><br><%= datetime Time.now %></small>
               <small class="pull-right"><%= t ".totalusers" %><br><%= Word.count %></small>
             </h2>
-              <div class="box-tools">
+            <div class="box-tools">
               <div class="input-group" style="width: 300px;">
-                <input type="text" name="table_search"
-                class="form-control input-sm pull-right" placeholder="Search">
-                <div class="input-group-btn">
-                  <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+                <%= form_tag(admin_words_path, :method => "get", id: "search-form") do %>
+                  <%= text_field_tag :search, params[:search], placeholder: "Search Word" %>
+                  <%= submit_tag "Search" %>
+                <% end %>
+                <br>
+                <div class="greyText fieldsToSearch">
+                  <%= link_to t(".reload"), admin_words_path, class: "btn btn-primary"  %>
                 </div>
               </div>
             </div>

@@ -156,7 +156,12 @@ en:
     index:
       panel_title: User Index
       title: All Users
-      number_of_users: user(s) found in database.
+      reload: Reload
+      avatar: Avatar
+      name: Full Name
+      followers: Followers
+      following: Following
+      number_of_users: There are no users with the name(s)
     create:
       success: Welcome to Framgia eLearning System!
       info: Please check your email to activate your account.
@@ -259,6 +264,7 @@ en:
         email: Email Address
         following: Following
         followers: Followers
+        sets: No. of Sets
         admin: Admin?
         total_users: Total Users
       show:
@@ -268,9 +274,33 @@ en:
         following: Following
         followers: Followers
         admin: Admin
+        description: Description
+        edit: Edit
+      set_lists:
+        set_list: Set Lists
+      studying:
+        studying: Studying Sets
+        set: Set Name
+        action: Unstudy
+      relationships:
+        following: Following
+        followers: Followers
       new:
         title: Create User
     user_sets:
+      index:
+        user_sets: User Sets
+        list: List
+        title: Title
+        description: Description
+        count: Word Count
+        created_by: Created By
+        recommended: Recommended
+        action: Actions
+        total: Total User Sets
+      new:
+        add_answer: Add Answer
+        add_new_answer: Add a new Answer
       edit:
         add_answer: Add Answer
         add_new_answer: Add a new Answer
@@ -278,8 +308,7 @@ en:
       index:
         link_home: Admin
         link_categories: Categories
-        title: Listing Categories
-        no_items_found: "SEARCH RESULT: THERE ARE NO CATEGORY ITEMS FOUND."
+        title: List of Categories
         totalcategories: Total Categories
       show:
         title: Category

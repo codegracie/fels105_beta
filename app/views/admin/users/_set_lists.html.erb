@@ -1,0 +1,28 @@
+<h3>
+  <b>
+    <%= t ".set_list" %>
+    <%= "(#{@user.user_sets.count})" %>
+  </b>
+</h3>
+<table class="table table-striped table-advance table-hover">
+  <thead>
+    <tr>
+      <th>
+        <%= t ".title" %>
+      </th>
+      <th>
+        <%= t ".description" %>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user_sets.each do |set| %>
+      <% unless set.title.nil? %>
+        <tr>
+          <td><%= link_to set.title, admin_user_set_path(set) %></td>
+          <td><%= set.description %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

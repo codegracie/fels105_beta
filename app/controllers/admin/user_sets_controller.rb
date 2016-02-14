@@ -1,6 +1,10 @@
 class Admin::UserSetsController < AdminController
   def index
-    @user_sets = UserSet.all
+    if params[:search]
+      @user_sets = UserSet.paginate(page: params[:page]).search(params[:search]).order("created_at DESC")
+    else
+      @user_sets = UserSet.paginate page: params[:page], per_page: 20
+    end
   end
 
   def show
@@ -8,8 +12,18 @@ class Admin::UserSetsController < AdminController
     @user_set_words = @user_set.words
   end
 
-  def edit
-    @user_set = UserSet.find params[:id]
+  def new
+    @user_set = UserSet.new
+    @user_set_types = {"Everyone": "1","Friends only": "2","Only me": "3"}
+    @categories = Category.all
+  end
+
+  def create
+    @user_set = UserSet.new user_set_params
+    if @user_set.save
+      redirect_to admin_user_sets_path
+    else
+    end
   end
 
   def edit

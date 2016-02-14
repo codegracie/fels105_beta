@@ -1,6 +1,10 @@
 class Admin::WordsController < AdminController
   def index
-    @words = Word.paginate page: params[:page], per_page: 10
+    if params[:search]
+      @words = Word.paginate(page: params[:page]).search(params[:search]).order("created_at DESC")
+    else
+      @words = Word.paginate page: params[:page], per_page: 20
+    end
   end
 
   def show
