@@ -151,6 +151,7 @@ en:
       unstudy: Unstudy
       recommended: Recommended Sets
       new: Newly created Sets
+      prompt: You want to unstudy this Set?
   users:
     index:
       panel_title: User Index
@@ -281,6 +282,7 @@ en:
         studying: Studying Sets
         set: Set Name
         action: Unstudy
+        prompt: You want to unstudy this Set?
       relationships:
         following: Following
         followers: Followers
