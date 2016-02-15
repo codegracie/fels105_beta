@@ -33,7 +33,7 @@
     <div class="small-box bg-yellow2">
       <div class="inner">
         <h3><%= User.count %></h3>
-        <p>User Registrations</p>
+        <p><%= t ".user" %></p>
       </div>
       <div class="icon">
         <i class="ion ion-person-add"></i>
@@ -47,7 +47,7 @@
     <div class="small-box bg-yellow2">
       <div class="inner">
         <h3><%= Category.count %></h3>
-        <p>Categories</p>
+        <p><%= t ".categories" %></p>
       </div>
       <div class="icon">
         <i class="ion ion-bag"></i>
@@ -60,8 +60,8 @@
   <div class="col-lg-3 col-xs-6">
     <div class="small-box bg-yellow2">
       <div class="inner">
-        <h3><%= Category.count %></h3>
-        <p>Categories</p>
+        <h3><%= Word.count %></h3>
+        <p><%= t ".words" %></p>
       </div>
       <div class="icon">
         <i class="ion ion-bag"></i>
@@ -74,8 +74,8 @@
   <div class="col-lg-3 col-xs-6">
     <div class="small-box bg-yellow2">
       <div class="inner">
-        <h3><%= Category.count %></h3>
-        <p>Categories</p>
+        <h3><%= UserSet.count %></h3>
+        <p><%= t ".sets" %></p>
       </div>
       <div class="icon">
         <i class="ion ion-bag"></i>
@@ -87,11 +87,3 @@
   </div>
 </div>
 <br>
-<footer class="main-footer">
-  <div class="pull-right hidden-xs">
-    <b>Version</b> 1.0.0
-  </div>
-  <strong>
-    Copyright © 2016 <a href="http://www.framgia.com">Grace Sojor and Christian Angel Galamay from Framgia Philippines</a>
-  </strong> All rights reserved.
-</footer>

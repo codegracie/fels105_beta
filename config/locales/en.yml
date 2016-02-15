@@ -222,12 +222,17 @@ en:
         link_home: Admin
         link_dashboard: Dashboard
         logged_user: Welcome back
-        link_demographics: Demographics
+        link_demographics: Summary
         text_controlpanel: Control Panel
         text_dashboard: Dashboard
         more_info_users: More Info
         userlist: More Info
         categorylist: More Info
+        user: User Registrations
+        categories: Categories count
+        words: Words count
+        sets: User Sets count
+
     words:
       index:
         link_home: Admin
