@@ -27,7 +27,7 @@ class UsersController < ApplicationController
       # flash[:info] = t ".info"
       # redirect_to root_url
       @user.update_attributes activated: true, activated_at: Time.zone.now
-      login @user
+      login user
       redirect_to user_path @user
     else
       render "new"
