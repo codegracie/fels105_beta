@@ -22,11 +22,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
-
     if @user.save
-      @user.send_activation_email
-      flash[:info] = t ".info"
-      redirect_to root_url
+      # @user.send_activation_email
+      # flash[:info] = t ".info"
+      # redirect_to root_url
+      @user.update_attributes activated: true, activated_at: Time.zone.now
+      login @user
+      redirect_to user_path @user
     else
       render "new"
     end
