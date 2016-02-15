@@ -22,6 +22,18 @@ User.create!(
 )
 puts "Done creating default user"
 
+User.create!(
+  first_name: "Sample",
+  last_name: "User",
+  email: "sample@example.com",
+  password: "password",
+  password_confirmation: "password",
+  avatar: seed_image("default.jpg"),
+  activated: true,
+  activated_at: Time.zone.now
+)
+puts "Done creating default user"
+
 99.times do |n|
   first_name  = Faker::Name.first_name
   last_name = Faker::Name.last_name
