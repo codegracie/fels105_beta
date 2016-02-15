@@ -20,7 +20,7 @@
         </td>
         <td>
           <%= link_to t(".unstudy"), set_lesson_path(set), method: :delete,
-            data: {confirm: "You want to unstudy this Set?"},
+            data: {confirm: t(".prompt")},
             class: "button btn btn-danger btn-xs"%>
         </td>
       </tr>

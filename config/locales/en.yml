@@ -112,9 +112,6 @@ en:
       users: List of Users
       sets: List of User Sets
       switchtouser: Switch to User
-  set_lessons:
-    edit:
-      submit: Submit
   relationships:
     index:
       title: Following and Followers
@@ -131,6 +128,8 @@ en:
     answers:
       view: View
       learned: Learned?
+    edit:
+      submit: Submit
   sessions:
     create:
       not_activated: Account not activated.
@@ -156,6 +155,7 @@ en:
       unstudy: Unstudy
       recommended: Recommended Sets
       new: Newly created Sets
+      prompt: You want to unstudy this Set?
   users:
     index:
       panel_title: User Index
@@ -226,12 +226,17 @@ en:
         link_home: Admin
         link_dashboard: Dashboard
         logged_user: Welcome back
-        link_demographics: Demographics
+        link_demographics: Summary
         text_controlpanel: Control Panel
         text_dashboard: Dashboard
         more_info_users: More Info
         userlist: More Info
         categorylist: More Info
+        user: User Registrations
+        categories: Categories count
+        words: Words count
+        sets: User Sets count
+
     words:
       index:
         link_home: Admin
@@ -286,6 +291,7 @@ en:
         studying: Studying Sets
         set: Set Name
         action: Unstudy
+        prompt: You want to unstudy this Set?
       relationships:
         following: Following
         followers: Followers

@@ -3,20 +3,23 @@
     <%= t ".studying" %>
   </div>
   <div class="panel-body">
-    <ul>
-      <% @set_lessons.each do |set| %>
-        <li>
-          <div class="col-md-6">
-            <%= link_to set.user_set.title, set_lessons_path(user_set_id: set.id),
-              method: :post %>
-          </div>
-          <div class="col-md-6">
-            <%= link_to t(".unstudy"), set_lesson_path(set), method: :delete,
-              data: {confirm: "You want to unstudy this Set?"}, class: "button btn btn-danger btn-xs"%>
-          </div>
-        <li>
-      <% end %>
-    </ul>
+    <table class="table table-striped table-advance table-hover">
+      <tbody>
+        <% @set_lessons.each do |set|  %>
+          <tr>
+            <td>
+              <%= link_to set.user_set.title, set_lessons_path(user_set_id: set.id),
+                method: :post %>
+            </td>
+            <td>
+              <%= link_to t(".unstudy"), set_lesson_path(set), method: :delete,
+                data: {confirm: t(".prompt")},
+                class: "button btn btn-danger btn-xs"%>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
 <div class="panel panel-info set-panel">
