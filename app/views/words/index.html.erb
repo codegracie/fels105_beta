@@ -11,6 +11,9 @@
             <h2 class="page-header">
             <%= t ".category" %></h2>
           </div>
+
+      <%#= form_for words_path, method: :get, remote: true, html: {id: "filter_form"} do |f| %>
+
         <div class="col-md-5">
           <%= select_tag :category_id,
             options_from_collection_for_select(@categories, :id, :name,
