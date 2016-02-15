@@ -108,9 +108,6 @@ en:
       answers: List of answers
       users: List of users
       sets: List of user sets
-  set_lessons:
-    edit:
-      submit: Submit
   relationships:
     index:
       title: Following and Followers
@@ -127,6 +124,8 @@ en:
     answers:
       view: View
       learned: Learned?
+    edit:
+      submit: Submit
   sessions:
     create:
       not_activated: Account not activated.
