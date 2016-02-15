@@ -195,6 +195,11 @@ en:
       view: View
     word_fields:
       remove: Remove
+    show_follow:
+      avatar: Avatar
+      name: Full Name
+      followers: Followers
+      following: Following
   user_mailer:
     account_activation:
       subject: Account activation
