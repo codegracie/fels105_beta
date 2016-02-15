@@ -1,0 +1,17 @@
+<div class="form-group">
+  <%= f.label :content, "Word", class: "control-label col-md-2" %>
+  <div class="col-md-3">
+    <%= f.text_field :content, class: "form-control" %>
+  </div>
+  <%= f.fields_for :answers, Answer.new do |ans| %>
+    <%= ans.label :content, "Answer", class: "control-label col-md-2" %>
+    <div class="col-md-3">
+      <%= ans.text_field :content, class: "form-control" %>
+      <%= ans.hidden_field :correct, value: true%>
+    </div>
+  <% end %>
+  <div class="col-sm-2">
+    <%= f.hidden_field :_destroy, class: "removable" %>
+    <%= link_to_remove_fields t(".remove"), f, "btn btn-danger" %>
+  </div>
+</div>

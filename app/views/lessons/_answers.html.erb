@@ -1,0 +1,24 @@
+<div class="word-answers">
+  <%= f.hidden_field :id %>
+  <%= f.hidden_field :lesson_id %>
+  <%= f.hidden_field :word_id %>
+  <div class="col-md-6">
+    <div class="word">
+      <h1>
+        <b><%= f.object.word.content %></b>
+      </h1>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="answers">
+      <ul>
+        <% f.object.word.answers.shuffle.each do |answer| %>
+          <li>
+            <%= f.radio_button :answer_id, answer.id %>
+            <%= f.label :answer_id, answer.content %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

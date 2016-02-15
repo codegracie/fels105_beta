@@ -1,0 +1,6 @@
+<tr>
+  <td><%= image_tag user.avatar, size: "50x50" %></td>
+  <td><%= link_to user.full_name, user %></td>
+  <td><%= user.followers.count %></td>
+  <td><%= user.following.count %></td>
+</tr>

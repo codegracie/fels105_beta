@@ -1,0 +1,13 @@
+<% if words.any? %>
+  <% @words.in_groups_of(4, false) do |row_word| %>
+    <tr>
+      <% row_word.each do |word| %>
+        <td>
+          <%= word.content %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+<% else %>
+  <%= t :no_items_found %>
+<% end %>

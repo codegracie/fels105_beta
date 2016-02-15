@@ -1,0 +1,21 @@
+<div class="vertical-container">
+  <% @user ||= current_user %>
+  <div>
+    <li><a href="#"><%= t ".total_words" %> <span class="pull-right badge bg-green">
+    <strong id="following" class="stat">
+      <%= @user.total_words_learned %>
+    </strong></span></a></li>
+  </div>
+  <div>
+    <li><a href="<%= relationships_path @user, type:'following' %>"><%= t ".following" %> <span class="pull-right badge bg-orange">
+    <strong id="following" class="stat">
+      <%= @user.following.count %>
+    </strong></span></a></li>
+  </div>
+  <div>
+    <li><a href="<%= relationships_path @user, type:'followers' %>"><%= t ".followers" %><span class="pull-right badge bg-red">
+    <strong id="followers" class="stat">
+      <%= @user.followers.count %>
+    </strong></span></a></li>
+  </div>
+</div>

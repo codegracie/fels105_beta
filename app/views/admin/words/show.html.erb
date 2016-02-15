@@ -1,0 +1,52 @@
+<section class="wrapper">
+  <h3>
+    <%= link_to admin_words_path do %>
+      <i class="fa fa-angle-right">
+        <%= t ".title" %>
+      </i>
+    <% end %>
+  </h3>
+  <div class="row mt">
+    <div class="col-md-9">
+      <section>
+        <div class="panel-heading">
+          <div class="pull-left">
+            <h5>
+              <i class="fa fa-tasks">
+              </i>
+            </h5>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div>
+            <ul>
+              <li>
+                <label class="bold">
+                  <%= t ".content" %>
+                </label>
+                <span>
+                  <%= @word.content %>
+                </span>
+              </li>
+              <li>
+                <label class="bold">
+                  <%= t ".content_category" %>
+                </label>
+                <span>
+                  <%= @word.category.name %>
+                </span>
+              </li>
+            </ul>
+            <%= render "show_answers" %>
+          </div>
+          <div class="add-task-row">
+            <%= link_to t(".edit"), edit_admin_word_path(@word),
+              class: "btn btn-success btn-sm pull-left" %>
+            <%= link_to t(".add"), new_admin_word_path(@word),
+              class: "btn btn-default btn-sm pull-right" %>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

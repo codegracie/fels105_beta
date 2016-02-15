@@ -1,0 +1,39 @@
+<%= form_for @user_set, html: {multipart: true,
+  class: "form-horizontal style-form"} do |f|%>
+  <div class="modal-body">
+    <div class="form-group">
+      <%= f.label :title, class: "control-label col-md-3" %>
+      <div class="col-md-9">
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :category_id, "Category", class: "control-label col-md-3" %>
+      <div class="col-md-9">
+        <%= f.collection_select :category_id, @categories, :id, :name,
+          {prompt: "Select a category"}, {class: "form-control"} %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :set_type, "Available For:", class: "control-label col-md-3" %>
+      <div class="col-md-9">
+        <%= f.select :set_type, options_for_select(@user_set_types), {},
+          {class: "form-control"} %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :description, class: "control-label col-md-3" %>
+      <div class="col-md-9">
+        <%= f.text_area :description, class: "form-control" %>
+      </div>
+    </div>
+    <%= f.fields_for :words do |builder| %>
+      <%= render "word_fields", f: builder %>
+    <% end %>
+    <div class="added-answer"></div>
+  <div class="modal-footer">
+    <%= link_to_add_fields t(".add_answer"), f, :words,
+      "btn btn-primary add-remove-answer", t(".add_new_answer") %>
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

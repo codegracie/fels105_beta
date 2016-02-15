@@ -1,0 +1,26 @@
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <li class="sidebar-brand">
+      <%= link_to image_tag("framgia_logo.png", alt: "Framgia logo", size:"50x50"),
+      t(".side_website") %>
+    </li>
+    <li class="sidebar-brand2">
+      <%= link_to t(".dashboard"), admin_root_path %>
+    </li>
+    <li>
+      <%= link_to t(".categories"), admin_categories_path %>
+    </li>
+    <li>
+      <%= link_to t(".words"), admin_words_path %>
+    </li>
+    <li>
+      <%= link_to t(".users"), admin_users_path %>
+    </li>
+    <li>
+      <%= link_to t(".sets"), admin_user_sets_path %>
+    </li>
+    <li>
+      <%= link_to t(".switchtouser"), root_path %>
+    </li>
+  </ul>
+</div>

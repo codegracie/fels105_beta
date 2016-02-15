@@ -1,0 +1,335 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+en:
+  account_activations:
+    edit:
+      valid: "Account Activated! Welcome"
+  time:
+    formats:
+      short: "%Y/%d/%m"
+  layouts:
+    application:
+      app_title: Fels105 Framgia eLearning System
+    header:
+      nav_title: Fels105 Framgia eLearning System
+    admin:
+      title: Fels105
+      toggle: Toggle Menu
+    header:
+      title: Admin Page
+      logout: Log out
+      tablink_home: Home
+      tablink_profile: My Profile
+      tablink_account: My Account
+      tablink_setting: Settings
+      tablink_users: Users List
+      tablink_login: Login
+      tablink_logout: Logout
+      tablink_words: Words List
+      tablink_lessons: Lessons
+      tablink_sets: My Sets
+      tablink_website: http://www.framgia.com
+    footer:
+      footer_title: Training Project by Grace Sojor and Christian Angel Galamay from Framgia Philippines
+      button_about: About this Project |
+      button_contact: Contact |
+      button_faq: Frequently Asked Questions
+  home:
+    index:
+      panel_title: Welcome back
+      sample_output: Learned 200 words
+      button_words: Words
+      button_lessons: Lessons
+      activities: Activities
+      activities_text: Your network feeds are shown below.
+    signup:
+      signup_welcome: Welcome to Framgia eLearning System
+      signup_description: Free online learning, and a worldwide community of native-speaking language learners just like you.
+      signup_button: Free Language Learning - Sign up now!
+    about:
+      about_desc: This is a training project by Grace Sojor and Christian Angel Galamay from Framgia Philippines.
+      about_text: Framgia eLearning System is a FREE languange learning tool online.
+    contact:
+      contact_desc: Get in touch with us
+      contact_text: Don't shy away! Drop us an email here grace.m.sojor@framgia.com and chrisitian.angel.g.galamay@framgia.com
+    faq:
+      faq_desc: Frequently Asked Questions
+      faq_text: We got you covered. We will guide you all the way.
+  categories:
+    index:
+      panel_title: Categories
+      start: Start
+  results:
+    show:
+      panel_title: Results
+      lesson_by: Lesson by
+      lesson_category: Lesson Category
+      result: Result
+  words:
+    index:
+      title: Your Word History
+      category: Category
+      content: All Words
+      total_words_learned: Your Total Words Learned
+      learned: Learned
+      not_learned: Not Learned
+      all: All
+      pdf: PDF
+      filter: Filter
+      vietnamese_sample: Vietnamese
+      japanese_sample: Japanese
+      total_words: Total Words in the Dictionary
+      no_items_found: No items found
+  partials_admin:
+    header:
+      title: Admin
+    sidebar:
+      side_title: Framgia 105
+      side_website: http://www.framgia.com
+      main_navigation: Main Navigation
+      dashboard: Dashboard
+      categories: Categories
+      words: List of Words
+      answers: List of answers
+      users: List of Users
+      sets: List of User Sets
+      switchtouser: Switch to User
+  set_lessons:
+    edit:
+      submit: Submit
+  relationships:
+    index:
+      title: Following and Followers
+  lessons:
+    update:
+      start: Lesson starts! Goodluck!
+      finish: Lesson done! Please check your result.
+    create:
+      start: Lesson starts! Goodluck!
+    edit:
+      panel_title: Lesson
+      submit: Submit
+  set_lessons:
+    answers:
+      view: View
+      learned: Learned?
+  sessions:
+    create:
+      not_activated: Account not activated.
+      check_email: Check your email for the activation link.
+      invalid: Invalid email/password combination
+    new:
+      header: Learn Anytime, Anywhere
+      content: Make your breaks and commutes more productive.<br/> Get to learn new languages at your own pace.<br/>Connect with native-speaking language learners just like you.
+      title: Sign in now
+      remember: Remember me on this computer
+      submit: Sign in
+  shared:
+    status:
+      followers: Followers
+      following: Following
+      total_words: Words Learned
+    follow:
+      follow: Follow
+    unfollow:
+      unfollow: Unfollow
+    sets:
+      studying: Studying Sets
+      unstudy: Unstudy
+      recommended: Recommended Sets
+      new: Newly created Sets
+  users:
+    index:
+      panel_title: User Index
+      title: All Users
+      reload: Reload
+      avatar: Avatar
+      name: Full Name
+      followers: Followers
+      following: Following
+      number_of_users: There are no users with the name(s)
+    create:
+      success: Welcome to Framgia eLearning System!
+      info: Please check your email to activate your account.
+    update:
+      success: Profile successfully updated!
+    new:
+      title: New to Framgia Elearning System?
+    show:
+      panel_title: Profile
+      link_profile: Welcome
+      button_words: Words
+      button_lessons: Lessons
+    form:
+      title: New to Framgia Elearning System?
+      signupnow:  Sign up now!
+      select_photo: Select Photo
+    user_set_form:
+      add_answer: Add Answer
+      add_new_answer: Add a new Answer
+    add_user_set:
+      lesson_list: My Lesson Set Lists
+      add_new: Add New
+      manage: Manage
+      title: Title
+      description: Description
+      add_lesson: Add new Lesson Set
+    show_user_set:
+      lesson_list: Lesson Set Lists
+      title: Title
+      description: Description
+      view: View
+    word_fields:
+      remove: Remove
+  user_mailer:
+    account_activation:
+      subject: Account activation
+      title: Framgia
+      message: Welcome to the Framgia eLearning! Click on the link below to activate your account
+      activate: Activate
+  user_sets:
+    index:
+      manage: Manage User Sets
+      list: List
+      title: Title
+      description: Description
+    show:
+      title: User Sets
+      description: Description
+    show_words:
+      word: Word
+      answer: Answer
+    edit:
+      add_answer: Add Answer
+      add_new_answer: Add a new Answer
+  admin:
+    dashboard:
+      index:
+        link_home: Admin
+        link_dashboard: Dashboard
+        logged_user: Welcome back
+        link_demographics: Demographics
+        text_controlpanel: Control Panel
+        text_dashboard: Dashboard
+        more_info_users: More Info
+        userlist: More Info
+        categorylist: More Info
+    words:
+      index:
+        link_home: Admin
+        link_text: Words
+        title: List of Words
+        add: Add
+        list: List
+        content: Content
+        content_category: Content Category
+      show:
+        title: Word
+        content: Content
+        content_category: Content Category
+      new:
+        title: Create Word
+      edit:
+        title: Edit Word
+      form:
+        add_answer: Add Answer
+        add_new_answer: Add a new Answer
+        list_of_answers: List of Answers
+      answer_fields:
+        answer: Answer
+        remove: Remove
+      show_answers:
+        list: List of answers
+        correct: Correct
+    users:
+      index:
+        link_home: Admin
+        link_text: Users
+        title: List of Users
+        name: Full name
+        email: Email Address
+        following: Following
+        followers: Followers
+        sets: No. of Sets
+        admin: Admin?
+        total_users: Total Users
+      show:
+        title: Users
+        name: Full Name
+        email: Email Address
+        following: Following
+        followers: Followers
+        admin: Admin
+        description: Description
+        edit: Edit
+      set_lists:
+        set_list: Set Lists
+      studying:
+        studying: Studying Sets
+        set: Set Name
+        action: Unstudy
+      relationships:
+        following: Following
+        followers: Followers
+      new:
+        title: Create User
+    user_sets:
+      index:
+        link_home: Dashboard
+        link_usersets: User Sets
+        user_sets: User Sets
+        list: List
+        title: Title
+        description: Description
+        count: Word Count
+        created_by: Created By
+        recommended: Recommended
+        action: Actions
+        total: Total User Sets
+      new:
+        add_answer: Add Answer
+        add_new_answer: Add a new Answer
+      edit:
+        add_answer: Add Answer
+        add_new_answer: Add a new Answer
+    categories:
+      index:
+        link_home: Admin
+        link_categories: Categories
+        title: List of Categories
+        totalcategories: Total Categories
+      show:
+        title: Category
+        name: Category Name
+        desc: Category Description
+      new:
+        title: Add New Category
+        new_category: New Category
+        create_successful: New Category is added successfully!
+        create_invalid: Invalid input
+        select_photo: Select category photo
+      edit:
+        title: Edit the Category
+errors:
+  messages:
+    carrierwave_processing_error: "Cannot resize image."
+    carrierwave_integrity_error: "Not an image."
+    carrierwave_download_error: "Couldn't download image."

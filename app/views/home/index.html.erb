@@ -1,0 +1,43 @@
+<% if logged_in? %>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <%= t ".panel_title" %> <%= current_user.full_name %>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="row user-profile">
+            <%= link_to image_tag(current_user.avatar, size: "150x150"), current_user %>
+          </div>
+          <div class="row user-profile">
+            <%= current_user.full_name %>
+          </div>
+          <div class="row user-profile">
+            <%= render "shared/status" %>
+            <%= render "shared/follow_form" %>
+            <%= render "shared/sets"%>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <h3><%= t ".activities" %></h3>
+            <ul>
+              <% @activities.each do |activity| %>
+                <li>
+                  <%= link_to image_tag(activity.log.avatar, size: "50x50"), activity.log %>
+                  <%= link_to activity.log.full_name, activity.log %>
+                  <div class="activity-content">
+                    <%= activity.content %>
+                  </div>
+                </li>
+                <hr>
+                <%= will_paginate @activities %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+<% else %>
+  <%= render "signup" %>
+<% end%>
